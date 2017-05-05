@@ -15,10 +15,10 @@ int somma = 0;
    fscanf(f, "%d", &num);
    printf("Valore attuale in sum.dat: %d\n", num);
  
-   printf("Digita un valore da sommare: ");
-   scanf("%d", &num_input);  
+   fclose(f);
 
-fclose(f);
+ printf("Digita un valore da sommare: ");
+ scanf("%d", &num_input);  
 
 somma = num + num_input;
 
