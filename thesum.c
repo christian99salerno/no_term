@@ -25,9 +25,9 @@ somma = num + num_input;
 printf("Nuovo valore: %d\n", somma);
 printf("Salvataggio in sum.dat in corso ...\n");
 
-FILE *f = fopen("sum.dat", "w");
+f = fopen("sum.dat", "w");
 
-fprintf(f, somma);
+fprintf(f, "%d",somma);
 
 fclose(f);
 
