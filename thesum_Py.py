@@ -1,27 +1,39 @@
+import sys
+
 f = open("sum.dat", "r")
+print f
+sys.exit(0)
 
-print "Lettura da sum.dat in corso ..."
+if not f:
+    num_input = input("Digita un valore da sommare: ")
+    
+    somma = num_input + 0
 
-line = f.readline()
+    print "File inesistente, il valore e': ", somma
 
-num = int(line)
+else:
+    print "Lettura da sum.dat in corso ..."
 
-print "Valore attuale in sum.dat: ", num
+    line = f.readline()
 
-f.close
+    num = int(line)
 
-num_input = input("Digita un valore da sommare: ")
+    print "Valore attuale in sum.dat: ", num
 
-somma = num + num_input
+    f.close
 
-print "Nuovo valore: ", somma
+    num_input = input("Digita un valore da sommare: ")
 
-print "Salvataggio in sum.dat in corso ..."
+    somma = num + num_input
 
-f = open("sum.dat", "w")
+    print "Nuovo valore: ", somma
 
-f.write(str(somma))
+    print "Salvataggio in sum.dat in corso ..."
 
-f.close()
+    f = open("sum.dat", "w")
+
+    f.write(str(somma))
+
+    f.close()
 
 
