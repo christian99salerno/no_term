@@ -1,13 +1,14 @@
-import sys
+import os
 
-f = open("sum.dat", "r")
-#print f
-#sys.exit(0)
+num = 0
 
-if not f:
+file = os.path.isfile("sum.dat")
+
+if not file:
     print "File inesistente, il valore di partenza e' 0"
 
 else:
+    f = open("sum.dat", "r")
     print "Lettura da sum.dat in corso ..."
     line = f.readline()
     num = int(line)
