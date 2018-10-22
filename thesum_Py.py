@@ -2,9 +2,9 @@ import os
 
 num = 0
 
-fil = os.path.isfile("sum.dat")
+fileExists = os.path.isfile("sum.dat")
 
-if not fil:
+if not fileExists:
     print("File inesistente, il valore di partenza e' 0")
 
 else:
