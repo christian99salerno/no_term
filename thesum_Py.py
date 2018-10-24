@@ -17,7 +17,7 @@ else:
 
 num_input = input("Digita un valore da sommare: ")
 
-somma = num + num_input
+somma = num + int(num_input)
 
 print("Nuovo valore: ", somma)
 print("Salvataggio in sum.dat in corso ...")
